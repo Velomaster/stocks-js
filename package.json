@@ -1,0 +1,31 @@
+{
+  "name": "stocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf dist && parcel src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html --no-source-maps --no-content-hash --public-url ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "array-move": "^2.2.2",
+    "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "numeral": "^2.0.6",
+    "popper.js": "^1.16.1",
+    "sortablejs": "^1.10.2",
+    "vanilla-masker": "^1.2.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.32.8"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  }
+}

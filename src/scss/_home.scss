@@ -1,0 +1,29 @@
+#stocks-main-table {
+    td:last-of-type {
+        width: 200px;
+    }
+}
+
+tr, th {
+    .form-control, .form-control:focus {
+        color: white;
+    }
+}
+
+footer {
+    height: 3em;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+// Sortable
+.sortable-chosen {
+    background-color: #454d55;
+}
+
+#sort-handle {
+    cursor: move;
+    cursor: -webkit-grabbing;
+}

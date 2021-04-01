@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks Tracker</title>
+    <link rel="stylesheet" type="text/css" href="./scss/main.scss">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"><i class="fas fa-university mr-2"></i> Stock Tracker</a>
+    </nav>
+    
+    <div class="container">
+        <div class="d-flex justify-content-between mt-3">
+            <h1>Stocks</h1>
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-outline-success mr-2" id="get-prices-btn">
+                  <span id="evaluation-label">Evaluate</span>
+                  <div class="d-none" id="evaluation-spinner">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </div>
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#addScock">Add</button>
+            </div>
+        </div>
+        <div class="collapse m-2" id="addScock">
+            <div class="card card-body">
+              <form id="add-stock-form" class="form-inline">
+                <input type="text" name="ticket" class="form-control mr-2" id="ticket" placeholder="Ticket">
+                <input type="text" name="company" class="form-control mr-2" id="company" placeholder="Company">
+                <input type="text" name="price" class="form-control mr-2" id="price" placeholder="Price">
+                <input type="text" name="quantaty" class="form-control mr-2" id="quantaty" placeholder="Quantaty">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+              <table id="stocks-main-table" class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Ticket</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Purchase Price</th>
+                    <th scope="col">Quantaty</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+        <h1>Portfolio</h1>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title">Invested</h5>
+                  <i class="fas fa-wallet fa-lg"></i>
+                </div>
+                <p id="portfolio-invested" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title">Equity</h5>
+                  <i class="fas fa-file-invoice-dollar fa-lg"></i>
+                </div>
+                <p id="portfolio-equity" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title">Result</h5>
+                  <i class="fas fa-coins fa-lg"></i>
+                </div>
+                <p id="portfolio-result" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="container mt-4">
+        <a href="https://iexcloud.io">Data provided by IEX Cloud</a>
+      </div>
+    </footer>
+
+    <!-- Message modal -->
+    <div class="modal fade" id="message-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="message-modal-title"></h5></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="message-modal-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
